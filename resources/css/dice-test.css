@@ -1,0 +1,246 @@
+/**********************************************
+    GENERAL
+**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #628381;
+    font-family: 'Montserrat', sans-serif;
+
+    background-image: url(img/F-S_Morning-Mist_11.jpg);
+    background-repeat: norepeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.game-board {
+    width: 1000px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #fff;
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.player-0-pannel,
+.player-1-pannel {
+    width: 50%;
+    height: 470px;
+    float: left;
+    background-color: #f9fcfc;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.dice {
+    position: absolute;
+    height: 100px;
+    box-shadow: 0px 2px 5px 2px rgba(98, 131, 129, 0.28);
+    top: 225px;
+    left: 450px;
+    /* transform: translateX(-50%); */
+}
+
+.display-none {
+    display: none;
+}
+
+/* Dice 1 animation */
+.dice:hover {
+    animation: pop 0.6s ease-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(1) }
+    30% { transform: scale(1.4) }
+    100% { transform: scale(0) }
+}
+/* ---------------- */
+
+button {
+    all: unset;
+    cursor: pointer;
+
+    color: #628381;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: -1px;
+    
+    position: absolute;
+    transition: transform 0.2s ease-in-out;
+}
+
+button img {
+    width: 28px;
+    display: inline-block;
+    vertical-align: text-top;
+    margin: -4px 7px 0 0;
+}
+
+button:hover {
+    font-weight: 300;
+    transform: scale(1.1);
+    /* transition: scale .2s ease-in-out; */
+}
+
+button:hover img {
+    margin-right: 9px;
+}
+
+#new-game {
+    left: 30px;
+    top: 32px;  
+}
+
+#game-rules {
+    left: 810px;
+    top: 32px;
+}
+
+#roll-dice {
+    left: 430px;
+    top: 400px;
+}
+
+#hold {
+    left: 450px;
+    top: 450px;
+}
+
+input {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 14px;
+    
+    display: block;
+    width: 152px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #628381;
+    border-radius: 1px;
+    margin-top: 2px;
+    box-shadow: 0px 1px 4px 2px rgba(98, 131, 129, 0.2);
+
+    font-weight: 500;
+    font-size: 25px; 
+    text-align: center;
+    color: #628381;
+}
+
+input::placeholder {
+    color: #b0d0ce;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    padding-bottom: 30px;
+}
+
+
+/**********************************************
+    PLAYERS
+**********************************************/
+
+.player-name {
+    font-weight: 100;
+    font-size: 40px;
+    margin-top: 60px;
+}
+
+.winner {
+    color: #ff8b92;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+#active-icon-0, #active-icon-1 {
+    display: none;
+    position: absolute;
+    width: 20px;
+    top: 144px;
+}
+
+#active-icon-0 {
+    left: 135px;
+}
+
+#active-icon-1{
+    left: 848px;
+    transform: rotate(180deg);
+}
+
+.total-score {
+    color: #ff8b92;
+    font-weight: 200;
+    font-size: 110px;
+    margin-top: 35px;
+}
+
+.current-panel {
+    margin: auto;
+    width: 175px;
+    height: 100px;
+    margin-top: 40px;
+    padding: 15px;
+
+    background-color: #fff;
+    border: 1px solid #ff8b92;
+    border-radius: 1px;
+    
+    text-transform: uppercase;
+    color: #ff8b92;
+    font-weight: 200;
+}
+.current-label {
+    font-size: 16px;
+}
+
+.current-score {
+    font-size: 40px;
+    margin-top: 8px;
+}
+
+
+/**********************************************
+    class = "active" properties
+**********************************************/
+
+.active {
+    background-color: #ebf3f3;
+}
+
+.active .player-name {
+    font-weight: 500;
+}
+
+.active .current-panel {
+    background-color: #ff8b92;
+    color: #fff;
+}
+
+.active #active-icon-0 {
+    display: block;
+}
+
+.active #active-icon-1 {
+    display: block;
+}
+/**********************************************/

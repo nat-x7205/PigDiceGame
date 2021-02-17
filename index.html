@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500&display=swap" rel="stylesheet">
+        <title>Dice Pig Game</title>
+    </head>
+
+    <body>
+        <div class="game-board clearfix">
+
+            <div class="player-0-pannel active">
+                <div class="player-name" id="player-0">
+                    <img src="resources/img/active-player_icon.svg" id="active-icon-0">
+                    Player 1
+                </div>
+                <div class="total-score" id="total-0">102</div>
+                <div class="current-panel">
+                    <div class="current-label">Current score</div>
+                    <div class="current-score" id="current-0">7</div>
+                </div>
+            </div>
+
+            <div class="player-1-pannel">
+                <div class="player-name" id="player-1">
+                    <img src="resources/img/active-player_icon.svg" id="active-icon-1">
+                    Player 2
+                </div>
+                <div class="total-score" id="total-1">0</div>
+                <div class="current-panel">
+                    <div class="current-label">Current score</div>
+                    <div class="current-score" id="current-1">0</div>
+                </div>
+            </div>
+
+            <button id="new-game-BTN"><img src="resources/img/new-game_icon.svg"/>New game</button>
+            <button id="game-rules-BTN"><img src="resources/img/game-rules_icon.svg"/>Game rules</button>
+
+            <button id="roll-dice-BTN"><img src="resources/img/roll-dice_icon.svg"/>Roll dice</button>
+            <button id="hold-BTN"><img src="resources/img/hold_icon.svg"/>Hold</button>
+
+            <input type="text" placeholder="Set winning score" id="winning-score">
+            <img src="resources/img/Dice-3.png" alt="Dice image" class="dice"/>
+
+            <div class="game-rules-window">
+                <img src="resources/img/close-window_icon.svg" alt="Close the window" id="close-icon"/>
+                
+                <div class="game-rules-copy">
+                    <p>The game is for two players, playing in rounds.</p>
+                    <p>Set the <b>winning score</b>. By default the winning score is <b>100</b>.</p>
+                    <p>In each turn, a player rolls a dice as many times as he/she whishes. 
+                        Each result get added to his/her <b>current score</b>.</p>
+                    <p>If the player rolls <b>1</b>, all his/her <b>current score</b> gets lost. 
+                        After that, it&apos;s the next player&apos;s turn.</p>
+                    <p>The player can choose to &lsquo;Hold&rsquo;, which means that his/her <b>current score</b> 
+                        gets added to his/her <b>total score</b>. After that, it&apos;s the next player&apos;s turn.</p>
+                    <p>The first player, who reaches the <b>winning score</b> on his/her <b>total score</b>, wins the game.</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <script src="resources/js/dice-pig-game.js"></script>
+    </body>
+
+</html>
