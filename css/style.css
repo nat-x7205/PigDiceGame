@@ -234,14 +234,6 @@ input::placeholder {
     color: #fff;
 }
 
-.active #active-icon-0 {
-    display: block;
-}
-
-.active #active-icon-1 {
-    display: block;
-}
-
 
 /**********************************************
     GAME RULES window
